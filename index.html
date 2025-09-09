@@ -1,49 +1,120 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form di Contatto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercitazione Frontend</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    header, footer { background-color: #f4f4f4; padding: 20px; text-align: center; }
+    nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; }
+    nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
+    section { padding: 20px; border-bottom: 1px solid #ccc; }
+    article { margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 8px; background-color: #fafafa; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    table, th, td { border: 1px solid #333; text-align: center; padding: 8px; }
+    form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto; }
+    input, textarea, button { padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
+    button { background-color: #333; color: #fff; cursor: pointer; }
+    blockquote { font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 10px; margin: 10px 0; }
+  </style>
 </head>
-
 <body>
-    <h1>Contattaci</h1>
 
-    <form action="mailto:indirizzomail1@gmail.com" method="post" enctype="text/plain">
+  <header>
+    <img src="Logo.png" alt="Logo" width="80">
+    <h1>Esercitazione Frontend</h1>
+    <nav>
+      <ul>
+        <li><a href="#articoli">Articoli</a></li>
+        <li><a href="#calendario">Calendario</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="articoli">
+      <h2>Sezione Articoli</h2>
+      
+      <article>
+        <h3>Articolo 1</h3>
+        <p>Questo è un esempio di <strong>testo in grassetto</strong> e di <em>testo in corsivo</em>.</p>
+        <p>Citazione d'esempio:</p>
+        <blockquote>Esempio </blockquote>
+      </article>
+
+      <article>
+        <h3>Articolo 2</h3>
+        <p>Elenco puntato di esempio:</p>
+        <ul>
+          <li>Punto uno</li>
+          <li>Punto due</li>
+          <li>Punto tre</li>
+        </ul>
+        <p>Link di esempio: <a href="https://www.example.com" target="_blank">Visita Example</a></p>
+      </article>
+
+      <article>
+        <h3>Articolo 3</h3>
+        <p>Elenco numerato di esempio:</p>
+        <ol>
+          <li>Primo passo</li>
+          <li>Secondo passo</li>
+          <li>Terzo passo</li>
+        </ol>
+        <p>Testo combinato con <strong>grassetto</strong> e <em>corsivo</em>.</p>
+      </article>
+    </section>
+
+    <section id="calendario">
+      <h2>Calendario della Settimana</h2>
+      <table>
+        <tr>
+          <th>Lunedì</th>
+          <th>Martedì</th>
+          <th>Mercoledì</th>
+          <th>Giovedì</th>
+          <th>Venerdì</th>
+          <th>Sabato</th>
+          <th>Domenica</th>
+        </tr>
+        <tr>
+          <td>Lezione</td>
+          <td>Studio</td>
+          <td>Lezione</td>
+          <td>Ripasso</td>
+          <td>Progetto</td>
+          <td>Libero</td>
+          <td>Libero</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contatti">
+      <h2>Contattaci</h2>
+      <form>
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
-        <br><br>
+        <input type="text" id="nome" name="nome" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
-        <br><br>
+        <input type="email" id="email" name="email" required>
 
         <label for="messaggio">Messaggio:</label>
-        <textarea id="messaggio" name="messaggio" placeholder="Scrivi il tuo messaggio" required></textarea>
-        <br><br>
+        <textarea id="messaggio" name="messaggio" rows="5"></textarea>
 
-        <label for="telefono">Telefono:</label>
-        <input type="text" id="telefono" name="telefono" placeholder="Inserisci il tuo numero">
-        <br><br>
-        <label for="citta">Città:</label>
-        <select id="citta" name="citta" required>
-            <option value="">Seleziona la tua città</option>
-            <option value="Roma">Roma</option>
-            <option value="Milano">Milano</option>
-            <option value="Napoli">Napoli</option>
-            <option value="Torino">Torino</option>
-            <option value="Firenze">Firenze</option>
-            <option value="Bologna">Bologna</option>
-            <option value="Venezia">Venezia</option>
-            <option value="Genova">Genova</option>
-            <option value="Palermo">Palermo</option>
-            <option value="Cagliari">Cagliari</option>
-        </select>
-        <br><br>
+        <button type="submit">Invia</button>
+      </form>
+    </section>
+  </main>
 
-        <input type="submit" value="Invia">
-    </form>
+  <footer>
+    <address>
+      Sito creato da <strong>Nome Cognome</strong><br>
+      Email: <a href="mailto:info@example.com">info@example.com</a><br>
+      Via Esempio 123, Roma
+    </address>
+  </footer>
+
 </body>
-
 </html>
